@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".Matches">
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upcoming Matches"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:id="@+id/pastm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Past Matches"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:id="@+id/presentm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Present Matches"
+        android:padding="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"/>
+
+</RelativeLayout>

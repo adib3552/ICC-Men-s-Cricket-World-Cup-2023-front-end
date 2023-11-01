@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".Fantasy">
+
+
+        <TextView
+            android:id="@+id/fan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Fantasy 11 Team"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="80dp"/>
+
+        <TextView
+            android:id="@+id/player1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 1"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/player2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 2"
+            android:layout_below="@id/player1"
+            android:padding="5dp"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/player3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 3"
+            android:layout_below="@id/player2"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/player4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 4"
+            android:layout_below="@id/player3"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/player5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 5"
+            android:layout_below="@id/player4"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"
+          />
+
+        <TextView
+            android:id="@+id/player6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 6"
+            android:layout_below="@id/player5"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"
+           />
+
+        <TextView
+            android:id="@+id/player7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 7"
+            android:layout_below="@id/player6"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"
+          />
+
+        <TextView
+            android:id="@+id/player8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 8"
+            android:layout_below="@id/player7"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"
+          />
+
+        <TextView
+            android:id="@+id/player9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 9"
+            android:layout_below="@id/player8"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"
+           />
+
+        <TextView
+            android:id="@+id/player10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 10"
+            android:layout_below="@id/player9"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <TextView
+            android:id="@+id/player11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 11"
+            android:layout_below="@id/player10"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/scr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Score"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="650dp"
+            android:layout_marginLeft="80dp"/>
+
+
+</RelativeLayout>
