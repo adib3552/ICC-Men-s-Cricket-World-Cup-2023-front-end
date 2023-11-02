@@ -10,13 +10,8 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiInterface {
-     @FormUrlEncoded
      @POST("/auth/save")
-     Call<String> saveuser(@Field("first_name") String first_name,
-                           @Field("last_name") String last_name,
-                           @Field("email") String email,
-                           @Field("password") String password,
-                           @Field("mobile_no") long mobile_no);
+     Call<User> saveuser(@Body User user);//direct class akare nibi code kom lage
 
 
 

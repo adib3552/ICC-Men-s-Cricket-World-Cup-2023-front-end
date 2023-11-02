@@ -1,5 +1,6 @@
 package com.example.cricliv;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,11 +23,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SignUp extends AppCompatActivity {
 
+    private ApiInterface apiInterface;//eigula global e declare korar try korbi ar instantiate constructor er bhitore korle bhalo
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        System.out.println("hello mf");
         Button sbtn= findViewById(R.id.S_up);
 
         sbtn.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +42,7 @@ public class SignUp extends AppCompatActivity {
     }
     public void doSave()
     {
-        ApiInterface api= RetrofitClient.getretrofit().create(ApiInterface.class);
+        apiInterface= RetrofitClient.getretrofit().create(ApiInterface.class);
         EditText fi_name=findViewById(R.id.f_name);
         EditText se_name=findViewById(R.id.s_name);
         EditText mail=findViewById(R.id.email);
@@ -50,31 +53,33 @@ public class SignUp extends AppCompatActivity {
       User us= new User(fi_name.getText().toString(),
               se_name.getText().toString(),
               mail.getText().toString(),
-              pas.getText().toString(), 0);
+              pas.getText().toString(), 1);
 
-        Call<String> call= api.saveuser(fi_name.getText().toString(),
-                se_name.getText().toString(),
-                mail.getText().toString(),
-                pas.getText().toString(), 0);
+        System.out.println(us);
 
-        call.enqueue(new Callback<String>() {
+        /**
+         * res folder a ekta file add korsi network_security_config.xml eita
+         * eita mainly tor form login er por url a information encrypted hoya jay eita prevent kore
+         * eita na korle backend hoilo permit dey na. Eitar jonno abr backend a change kora lagto eijonno
+         * eita halka insecure banailam apatoto pera nai
+         */
 
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                String re=response.body();
-                if (response.isSuccessful()) {
-                    Toast.makeText(SignUp.this, "hoise", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(SignUp.this, "hote niye hoy nai", Toast.LENGTH_SHORT).show();
+        apiInterface.saveuser(us).enqueue(
+                new Callback<User>() {
+                    @Override
+                    public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
+                        Toast.makeText(SignUp.this, "successful", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
+                        Toast.makeText(SignUp.this, t.toString(), Toast.LENGTH_LONG).show();
+                        System.out.println(t);
+                    }
                 }
-            }
+        );
 
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-                Toast.makeText(SignUp.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        finish();
+
         Intent intent = new Intent(SignUp.this,Login.class);
         startActivity(intent);
 
